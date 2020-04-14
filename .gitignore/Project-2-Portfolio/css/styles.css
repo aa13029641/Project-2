@@ -119,6 +119,7 @@ main p {
 footer {
     background-color: lightblue;
     padding: .5em 0;
+    margin-top: 10px;
 }
 .footer-hr {
     width: 90%;
@@ -157,39 +158,27 @@ footer nav {
     display: none;
 }
 @media (min-width:768px){
-    .grid-1 {
+    /*---------------STUDENT-INFO/TOP NAV---------------*/
+    
+    .grid-2 {
         display: grid;
-        grid-template-columns: 50% 50%;
         grid-template-rows: auto;
-        grid-template-areas: "portfolio-1 portfolio-2"
-                    "portfolio-3 portfolio-4"
-                    "portfolio-5 portfolio-6";
+        grid-template-columns: 100%;
+        grid-template-areas: "grid-header"
+                    "top-nav-list";
+        flex-direction: row;
     }
-    .portfolio-name {
-        grid-area: portfolio-name;
+    .box-5 {
+        grid-area: grid-header;
     }
-    .portfolio-1 {
-        grid-area: portfolio-1;
+    .box-6 {
+        grid-area: top-nav-list;
     }
-    .portfolio-2 {
-        grid-area: portfolio-2;
+    .top-nav ul {
+        margin: 0 auto;
     }
-    .portfolio-3 {
-        grid-area: portfolio-3;
-    }
-    .portfolio-4 {
-        grid-area: portfolio-4;
-    }
-    .portfolio-5 {
-        grid-area: portfolio-5;
-    }
-    .portfolio-6 {
-        grid-area: portfolio-6;
-    }
-    /*---------------STUDENT-INFO---------------*/
-    .top-nav-768{
+    .student-info {
         text-align: center;
-        display: inline-block;
     }
     .top-nav-768 li{
         float: left;
@@ -199,11 +188,13 @@ footer nav {
     .container-1 {
         display: flex;
         width: 100%;
+        padding-bottom: 20px;
     }
     .box-1 {
         flex: auto;
         width: 50%;
         order: 2;
+        margin: auto 0;
         background-color: inherit;
     }
     .developer-img {
@@ -238,6 +229,39 @@ footer nav {
         border: 3px red solid;
 */
     }
+
+
+    /*---------------MAIN CONTENT-------------*/
+    .grid-1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        grid-template-areas: "portfolio-1 portfolio-2"
+                    "portfolio-3 portfolio-4"
+                    "portfolio-5 portfolio-6";
+    }
+    .portfolio-name {
+        grid-area: portfolio-name;
+    }
+    .portfolio-1 {
+        grid-area: portfolio-1;
+    }
+    .portfolio-2 {
+        grid-area: portfolio-2;
+    }
+    .portfolio-3 {
+        grid-area: portfolio-3;
+    }
+    .portfolio-4 {
+        grid-area: portfolio-4;
+    }
+    .portfolio-5 {
+        grid-area: portfolio-5;
+    }
+    .portfolio-6 {
+        grid-area: portfolio-6;
+    }
+/*----------FOOTER/ CONTACT AREA--------------*/
     .email {
         border-bottom: 2px black solid;
         padding-bottom: 20px;
@@ -255,17 +279,42 @@ footer nav {
         justify-self: self-start;
         padding-left: 10px;
     }
-
     .box-4 {
         order: 2;
         align-self: center;
     }
+    footer {
+        margin-top: 20px;
+    }
+
 }
 @media (min-width:1024px){
 
 /*-------------STUDENT INFO/NAV-------------*/
-.container-2 {
+.grid-1 {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    grid-template-areas: "portfolio-1 portfolio-2 portfolio-3"
+                "portfolio-4 portfolio-5 portfolio-6";
+}
+
+.container-3 {
     display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.box-3 {
+    order: 1;
+    justify-self: self-start;
+    padding-left: 10px;
+}
+
+.box-4 {
+    order: 2;
+    align-self: flex-end;
+    justify-self: center;
 }
 
 .box-5 {
@@ -274,6 +323,12 @@ footer nav {
 .box-6 {
     padding-right: 0;
 }
+
+.top-nav ul {
+    margin: 0;
+    padding-right: 50px;
+}
+
 .top-nav li{
     padding: 0;
 }
@@ -291,5 +346,7 @@ footer nav {
 footer p {
     padding: 1% 0;
 }
+
+
 
 }
